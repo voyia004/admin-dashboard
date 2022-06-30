@@ -38,10 +38,10 @@ body{
 .main-content{
   padding-top: 50px;
   background-attachment: fixed;
-  margin-left: 100px;
+  margin-left: 20px;
 }
 .container-fluid{
-    padding-top: 10px;
+    padding-top: 50px;
 }
 .col-lg-3{
     padding-top: 10px;
@@ -59,7 +59,7 @@ body{
     font-size: 30px;
 }
 .main-content{
-    margin-left: 100px;
+    margin-left: 50px;
 }
 }
 /* Extra smamll devices (potrait phones, less than 576px)*/
@@ -74,7 +74,7 @@ body{
     font-size: 20px;
 }
 .main-content{
-    margin-left: 75px;
+    margin-left: 50px;
 }
 }
 /* medium devices (tablet, 768px and up */
@@ -92,13 +92,13 @@ body{
     font-size: 30px;
 }
 .main-content{
-    margin-left: 200px;
+    margin-left: 100px;
 }
 }
 /* large devices */
 @media (min-width:992px){
 .sidebar{
-    width: 100px;
+    width: 100%;
 }
 .sidebar ul li{
     text-align: left;
@@ -110,13 +110,13 @@ body{
     font-size: 20px;
 }
 .margin-content{
-    margin-left: 200px;
+    margin-left: 100%;
 }
 }
 /* extra large devices */
 @media (min-width: 1200px){
 .sidebar{
-    width: 200px;
+    width: 100px;
 }
 .sidebar ul li {
     text-align: left;
@@ -128,6 +128,6 @@ display: inline;
     font-size: 20px;
 }
 .main-content{
-    margin-left: 200px; 
+    margin-left: 100px; 
 }
 }
