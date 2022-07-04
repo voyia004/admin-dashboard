@@ -17,7 +17,7 @@
       <img src="images/images.jfif" alt="zalego" height="50" width="50" class="rounded-circle">
 	  <a href="#" class="navbar-trigger"><span></span></a>
 	</div>
-	<div class="sidebar">
+	<div class="sidebar" style="background-color:#7fc242;">
        <nav>
 		   <ul>
 			<li>
@@ -47,7 +47,7 @@
 		   </ul>
 	   </nav>
 	</div>
-	<div class="maincontent">
+	<div class="main-content">
         <div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-12 pt-5">

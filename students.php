@@ -1,3 +1,20 @@
+<?php
+  $server='localhost';
+  $username='root';
+  $password="";
+  $database="zalego";
+
+
+
+
+  $conn = mysqli_connect($server,$username,$password,$database);
+  $sqli = mysqli_query($conn, "SELECT * FROM enroll");
+
+
+
+
+
+  ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,8 +64,8 @@
 		   </ul>
 	   </nav>
 	</div>
-	<div class="maincontent">
-       <div class="container-fluid">
+	<div class="main-content">
+        <div class="container-fluid">
 			
 		
 		    <div class="row">
@@ -59,52 +76,47 @@
 						<span>student Analysis</span>
 					</div>
 						<div class="card-body">
-												<table class="table">
-						<thead>
-							<tr>
-							<th scope="col">id</th>
-							<th scope="col">Fullname</th>
-							<th scope="col">phone</th>
-							<th scope="col">email</th>
-							<th scope="col">course</th>
-							<th scope="col">gender</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-							<th scope="row">1</th>
-							<td>Mike</td>
-							<td>0796475668</td>
-							<td>voyiamike@gmail.com</td>
-							<td>datascience</td>
-							<td>male</td>
-							</tr>
-							<tr>
-							<th scope="row">2</th>
-							<td>Jake</td>
-							<td>07225367746</td>
-							<td>giddyman@gamil.com</td>
-							<td>cybersecurity</td>
-							<td>male</td>
-							</tr>
-							<tr>
-							<th scope="row">3</th>
-							<td>Lawson</td>
-							<td>07883983939</td>
-							<td>skilli@gmail.com</td>
-							<td>cybersecurity</td>
-							<td>male</td>
-							</tr>
-							<tr>
-							<th scope="row">4</th>
-							<td>wilson</td>
-							<td>07883983939</td>
-							<td>kwilson@gmail.com</td>
-							<td>software developement</td>
-							<td>male</td>
-							</tr>
-						</tbody>
-						</table>
+								<table class="table table-stripped table-hover table-responsive">
+										<thead>
+											<tr>
+											<th scope="col">id</th>
+											<th scope="col">Fullname</th>
+											<th scope="col">phone</th>
+											<th scope="col">email</th>
+											<th scope="col">course</th>
+											<th scope="col">gender</th>
+											<th scope="col">enrolled on</th>
+											<th scope="col">action</th>
+											</tr>
+										</thead>
+										<tbody>
+											<?php while($fetch= mysqli_fetch_array($sqli)) { ?>
+							                    <tr>
+													<td><?php echo $fetch['no']?></td>
+                                                    <td><?php echo $fetch['fullname']?></td>
+                                                    <td><?php echo $fetch['phonenumber']?></td>
+											        <td><?php echo $fetch['email']?></td>
+													<td><?php echo $fetch['course']?></td>
+													<td><?php echo $fetch['gender']?></td>
+													<td><?php echo $fetch['created_at']?></td>
+													<td>
+												<a href="#" class=" btn btn-primary btn-sm">
+													<i class="fa fa-edit"></i>
+												</a>
+												<a href="#" class=" btn btn-info btn-sm">
+													<i class="fa fa-eye"></i>
+												</a>
+												<a href="#" class=" btn btn-danger btn-sm">
+													<i class="fa fa-trash"></i>
+												</a>
+											</td>
+											</tr>
+												<?php }?>	
+											
+									
+									
+										</tbody>
+						        </table>
 						</div>
 						<div class="card-footer"></div>
 					

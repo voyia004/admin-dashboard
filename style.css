@@ -16,7 +16,7 @@ body{
 .sidebar{
     position: absolute;
     width: 10px;
-    background-color: red;
+    background-color: #7fc242;
     height: 100vh;
     z-index: 4;
     padding-top: 50px;
@@ -42,6 +42,7 @@ body{
 }
 .container-fluid{
     padding-top: 50px;
+    margin-left: 10px;
 }
 .col-lg-3{
     padding-top: 10px;
@@ -62,7 +63,7 @@ body{
     margin-left: 50px;
 }
 }
-/* Extra smamll devices (potrait phones, less than 576px)*/
+/* Extra small devices (potrait phones, less than 576px)*/
 @media (max-width: 575.98px){
 .sidebar{
     width: 50px;
