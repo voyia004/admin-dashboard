@@ -8,7 +8,7 @@ body{
 .header{
     position: absolute;
     height: 50px;
-    width: 100%;
+    width: 100vh;
     background-color: #f57e20;
     z-index: 5;
     
@@ -17,7 +17,7 @@ body{
     position: absolute;
     width: 10px;
     background-color: #07b00d;
-    height: 100vh;
+    height: 100%;
     z-index: 4;
     padding-top: 50px;
 }
@@ -51,7 +51,7 @@ body{
 /* small devices (landscape phone, 576px and up) */
 @media screen and (min-width:576px) {
 .sidebar{
-    width: 120px;
+    width: 50px;
 }
 .sidebar ul li span:nth-child(2){
     display: none;
@@ -66,7 +66,7 @@ body{
 /* Extra small devices (potrait phones, less than 576px)*/
 @media (max-width: 575.98px){
 .sidebar{
-    width: 50px;
+    width: 50vh;
 }  
 .sidebar ul li span:nth-child(2){
     display: none;
@@ -75,13 +75,13 @@ body{
     font-size: 20px;
 }
 .main-content{
-    margin-left: 50px;
+    margin-left: 50vh;
 }
 }
 /* medium devices (tablet, 768px and up */
 @media (min-width:768){
 .sidebar{
-    width: 100px;
+    width: 100vh;
 }
 .sidebar ul li{
     text-align: center;
@@ -93,7 +93,7 @@ body{
     font-size: 30px;
 }
 .main-content{
-    margin-left: 100px;
+    margin-left: 100vh;
 }
 }
 /* large devices */
