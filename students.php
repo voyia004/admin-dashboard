@@ -27,7 +27,7 @@
 						<span>student Analysis</span>
 					</div>
 						<div class="card-body">
-								<table class="table table-stripped table-hover table-responsive">
+								<table class="table table-stripped table-hover table-responsive" style="font-size:12px">
 										<thead>
 											<tr>
 											<th scope="col">id</th>

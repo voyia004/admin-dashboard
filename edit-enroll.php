@@ -1,4 +1,5 @@
 <?php
+  $message = "";
    require_once('logics/dbconnection.php');
 
 
@@ -9,34 +10,10 @@
        $phonenumber = $fetchstudent['phonenumber'];
        $email = $fetchstudent['email'];
        $gender = $fetchstudent['gender'];
-     
+       $id = $fetchstudent['no'];  
     }
-    // updating user records
-    if(isset($_POST['updateenroll']))
-    {
-        //fetch form data
-        $fullname = $_POST['fullname'];
-        $phonenumber = $_POST['phonenumber'];
-       $email =  $_POST['email'];
-       $gender = $_POST['gender'];
-
-       //perform the sqli query
     
-       $updateenroll = mysqli_query($conn, "UPDATE enroll SET fullname ='$fullname', phonenumber ='$phonenumber', email ='$email', gender ='$gender'
-       WHERE id='".$_GET['id']."'");
-
-       if($updateenroll)
-       {
-        message updated succesfully;
-       }
-       else
-     {
-        message not updated succesfully;
-     }
-    }
-
-
-
+    require_once('logics/process-update.php') 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -65,9 +42,10 @@
                           <div class="card">
                               <div class="card-header bg-dark text-center text-white">
                                 <h4> Edit student <?php echo $fullname ?></h4>
-                              </div>
+                              <?php echo $message ?>
+                            </div>
                                <br><br>
-                                    <form action="enroll.php" method="POST">
+                                    <form action="edit-enroll.php?id=<?php echo $id?>" method="POST">
                                         <div class="row">
                                                 <div class="mb-3 col-lg-6">
                                                         <label for="fullname" class="form-label">Fullname:</label>
@@ -94,15 +72,12 @@
                                                     </div>
                                                 </div>
                                                     <br><br>
-                                                    
-                                                    <div class="row" style="text-align:center:">
-                                            
-                                                </div>
+                                                   
                                     
                                                 <div class="row" style="text-align:center:">
                                                         <div class="mb-3 col-lg-6">
                                                             <br>      
-                                                            <button type="submit" name="submitbutton" class="btn btn-primary">update records</button>
+                                                            <button type="submit" name="updateenroll" class="btn btn-primary">update records</button>
                                                         </div>
                                                 </div>
                                     </form>                                                                    
