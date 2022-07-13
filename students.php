@@ -55,10 +55,10 @@
 														<a href="edit-enroll.php? id=<?php echo $fetch['no'] ?>" class=" btn btn-primary">
 															<i class="fa fa-edit"></i>
 														</a>
-														<a href="#" class=" btn btn-info ">
+														<a href="view-enrollment.php? id=<?php echo $fetch['no'] ?>" class=" btn btn-info ">
 															<i class="fa fa-eye"></i>
 														</a>
-														<a href="#" class=" btn btn-danger ">
+														<a href="delete-enrollment.php? id=<?php echo $fetch['no'] ?>" class=" btn btn-danger ">
 															<i class="fa fa-trash"></i>
 														</a>
 											        </td>	
