@@ -10,8 +10,14 @@
 			   <li>
 				     <a href="students.php">
                         <span> <i class="fa fa-group"></i></span>
-					<a href="students.php" class="student">	<span>students</span></a>
-					 </a>
+						<span>students</span>
+                     </a>
+			   </li>
+			   <li>
+				     <a href="contactus.php">
+                        <span> <i class="fa fa-envelope"></i></span>
+						<span>messages</span>
+					</a>	
 			   </li>
 			   <li>
 				<a href="">
