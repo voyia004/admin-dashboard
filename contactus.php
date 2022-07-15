@@ -52,8 +52,14 @@
 													<td><?php echo $fetch['message']?></td>
 													<td><?php echo $fetch['created_at']?></td>
 													<td>
-                                                    <a href="view-contactus.php? id=<?php echo $fetch['no'] ?>" class=" btn btn-primary">
+                                                    <a href="edit-contactus.php? id=<?php echo $fetch['no'] ?>" class=" btn btn-primary">
 															<i class="fa fa-edit"></i>
+														</a>
+                                                        <a href="view-contactus.php? id=<?php echo $fetch['no'] ?>" class=" btn btn-secondary">
+															<i class="fa fa-eye"></i>
+														</a>
+                                                        <a href="view-contactus.php? id=<?php echo $fetch['no'] ?>" class=" btn btn-danger">
+															<i class="fa fa-trash"></i>
 														</a>
 											        </td>	
 											    </tr>

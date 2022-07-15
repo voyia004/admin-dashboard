@@ -6,9 +6,9 @@ $sqlfetchenrolledstudent = mysqli_query($conn, "SELECT * FROM contactus WHERE no
     while($fetchstudent =mysqli_fetch_array($sqlfetchenrolledstudent))
     {
        $firstname = $fetchstudent['firstname'];
-       $lastname = $fetchstudent['lastname'];
-       $email = $fetchstudent['email'];
        $phonenumber = $fetchstudent['phonenumber'];
+       $email = $fetchstudent['email'];
+       $lastname = $fetchstudent['lastname'];
        $message = $fetchstudent['message'];
     }
 
@@ -32,55 +32,28 @@ $sqlfetchenrolledstudent = mysqli_query($conn, "SELECT * FROM contactus WHERE no
             <?php require_once('includes/navbar.php') ?>
 
         <?php require_once('includes/sidebar.php') ?>
-        <div class="main-content pt-5">
-                <div class="container-fluid">
+
+            <div class="main-content pt-5">
+                <div class="container-fluid" >
                    <div class="row">
-                        <div class="col-lg-12">
-                          <div class="card">
-                              <div class="card-header bg-dark text-center text-white">
-                                <h4> Edit student <?php echo $firstname ?></h4>
-                              <?php echo $message ?>
+                    <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header bg-dark text-white text-center">
+                                    <h4 class="class-title">personal information</h4>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group">
+                                    <li class="list-group-item">firstname: <span class="float-right badge badge-secondary "><?php echo $firstname ?></span></li>  
+                                    <li class="list-group-item">email: <span class="float-right badge badge-warning"><?php echo $email ?></span></li> 
+                                    <li class="list-group-item">phonenumber: <span class="float-right badge badge-primary"><?php echo $phonenumber ?></span></li> 
+                                    <li class="list-group-item">lastname: <span class="float-right badge badge-primary"><?php echo $lastname ?></span></li> 
+                                    </ul>
+                                </div>
                             </div>
-                               <br><br>
-                                    <form action="view-contactus.php?id=<?php echo $id?>" method="POST">
-                                        <div class="row">
-                                                <div class="mb-3 col-lg-6">
-                                                        <label for="firstname" class="form-label">Firstname:</label>
-                                                        <input type="text" name="firstname" class="form-control" placeholder="Enter your firstname" value="<?php echo $firstname ?>">
-                                                    </div>
-                                                
-                                                    <div class="mb-3 col-lg-6">
-                                                        <label for="lastname" class="form-label">lastname</label>
-                                                        <input type="tel" name="lastname" class="form-control" placeholder="lastname"value="<?php echo $lastname ?>" >
-                                                    </div>
-                                        </div>
-                                                <div class="row">
-                                                    <div class="mb-3 col-lg-6">
-                                                        <label for="email" class="form-label">email</label>
-                                                        <input type="text" name="email" class="form-control" placeholder="Enter your email"value="<?php echo $email?>" >
-                                                    </div>
-                                                    <div class="mb-3 col-lg-6">
-                                                        <label for="message" class="form-label">message</label>
-                                                        <input type="text" name="message" class="form-control" placeholder="Enter your message"value="<?php echo $message?>" >
-                                                    </div>
-                                                   
-                                                </div>
-                                                    <br><br>
-                                                   
-                                    
-                                                <div class="row" style="text-align:center:">
-                                                        <div class="mb-3 col-lg-6">
-                                                            <br>      
-                                                            <button type="submit" name="updatecontactus" class="btn btn-primary">update records</button>
-                                                        </div>
-                                                </div>
-                                    </form>                                                                    
-                            </div>
-                        </div>
+                    </div>
                    </div>
                 </div>
             </div>    
-           
                         <br><br>
 
 
