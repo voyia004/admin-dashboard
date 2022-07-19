@@ -9,7 +9,8 @@
   ?>
 <!DOCTYPE html>
 <html>
-  <?php require_once('includes/header.php') ?>
+  <?php require_once('includes/header.php') ;
+  require_once('addstudent.php'); ?>
 <body>
 	<!-- All our code. write here   -->
 
@@ -24,7 +25,11 @@
 				
 				<div class="col-lg-12">
 					<div class="card-header bg-dark text-white text-center">
-						<span>student Analysis</span>
+						<span>student Analysis</span> 
+						 <a href="#" class="btn btn-success btn-sm pull-right" data-toggle="modal" data-target="#addstudent">
+                                            
+								<i class="fa fa-plus-circle"></i>
+                                        </a>
 					</div>
 						<div class="card-body">
 								<table class="table table-stripped table-hover table-responsive" style="font-size:12px">
@@ -78,8 +83,90 @@
 		</div>
 	</div>
        
+<div class="modal fade" id="addstudent" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Basic Modal</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-label="close">
+				   <span aria-hidden="true">x</span>
+			    </button>
+			</div>
+			<div class="modal-body">
+                  <form action="addstudent.php" method="POST">
+					<div class="row">
+						<div class="col-lg-6">
+						<form action="students.php" method="POST">
+                                        <div class="row">
+                                                <div class="mb-3 col-lg-6">
+                                                        <label for="fullname" class="form-label">Fullname:</label>
+                                                        <input type="text" name="fullname" class="form-control" placeholder="Enter your fullname">
+                                                    </div>
+                                                
+                                                    <div class="mb-3 col-lg-6">
+                                                        <label for="phonenumber" class="form-label">phonenumber</label>
+                                                        <input type="tel" name="phonenumber" class="form-control" placeholder="phonenumber" >
+                                                    </div>
+                                        </div>
+                                                <div class="row">
+                                                    <div class="mb-3 col-lg-6">
+                                                        <label for="email" class="form-label">email</label>
+                                                        <input type="text" name="email" class="form-control" placeholder="Enter your email" >
+                                                    </div>
+                                                    <div class="mb-3 col-lg-6">
+                                                        <label for="gender" class="form-label">gender</label>
+                                                        <select class="form-control" aria-label="Default select example" name="gender"  >
+                                                        <option selected style></option>
+                                                        <option value="male">male</option>
+                                                        <option value="female">female</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
 
-
+                                                <span style="text-align:center;">in order to complete your registration to the bootcamp, you are required to select one course you will be undertaking. Please NOTE that this will be your learning trtack during the two weeks immersion.</span><br>
+                                            <div class="row" style="text-align:center:">
+                                                    <div class="mb-3 col-lg-6">
+                                                        <label for="course" class="form-label"><b>whats your preffered course</b></label>
+                                                            <select class="form-select" aria-label="Default select example" name="course">
+                                                            <option>--select your course--</option>
+                                                            <option value="data science">data science</option>
+                                                            <option value="cyber security">cyber security</option>
+                                                            <option value="software developement">software developement</option>
+                                                            </select>
+                                                    </div>
+                                        </div>
+                                                          <br> 
+                                       
+                                        <div class="row" style="text-align:center:">
+                                            <div class="mb-3 col-lg-6">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 form-check">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                            <label class="form-check-label" for="exampleCheck1"><b>Agree Terms & Conditions</b></label>
+                                        </div>
+                                                                                
+                                                    <br><br>
+                                                   
+                                    
+                                                <div class="row" style="text-align:center:">
+                                                        <div class="mb-3 col-lg-6">
+                                                            <br>      
+                                                            <button type="submit" name="submitbutton" class="btn btn-primary">Add students</button>
+                                                        </div>
+                                                </div>
+                        </form>                                                  
+						</div>
+					</div>
+				  </form>
+			</div>
+			<div class="modal-footer">
+                  <button type="button" class="btn btn-danger btn-sm" data-dismiss="modal">close</button>
+				  <button type="button" class="btn btn-dark btn-sm">save changes</button>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 

@@ -1,25 +1,27 @@
 <?php
 // updating user records
-    if(isset($_POST['updateenroll']))
+
+ require_once('logics/dbconnection.php');
+    if(isset($_POST['update']))
     {
         //fetch form data
-            $fullname = $_POST['fullname'];
+        $firstname = $_POST['firstname'];
         $phonenumber = $_POST['phonenumber'];
         $email =  $_POST['email'];
         $lastname =  $_POST['lastname'];
   
        //perform the sqli query
     
-       $updateenroll = mysqli_query($conn, "UPDATE enroll SET firstname ='$firstname', phonenumber ='$phonenumber', email ='$email',  lastname ='$lastname',
+       $updateenroll = mysqli_query($conn, "UPDATE contactus SET firstname ='$firstname', phonenumber ='$phonenumber', email ='$email',  lastname ='$lastname'
        WHERE no='".$_GET['id']."'");
 
        if($updateenroll)
        {
-        $message = "updated succesfully";
+        $msg = "updated succesfully";
        }
        else
      {
-        $message = "not updated succesfully";
+        $msg = "not updated succesfully";
      }
     }
     ?>

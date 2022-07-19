@@ -1,5 +1,6 @@
 <?php
 //1.data base connection
+$msg="";
 require_once('logics/dbconnection.php');
 $sqlfetchenrolledstudent = mysqli_query($conn, "SELECT * FROM contactus WHERE no='".$_GET['id']."'  "  );
    
@@ -11,7 +12,7 @@ $sqlfetchenrolledstudent = mysqli_query($conn, "SELECT * FROM contactus WHERE no
        $phonenumber = $fetchstudent['phonenumber'];
        $message = $fetchstudent['message'];
     }
-    require_once('logics/process-update.php') 
+    require_once('logics/update.php') ;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,11 +39,11 @@ $sqlfetchenrolledstudent = mysqli_query($conn, "SELECT * FROM contactus WHERE no
                         <div class="col-lg-12">
                           <div class="card">
                               <div class="card-header bg-dark text-center text-white">
-                                <h4> Edit student <?php echo $firstname ?></h4>
-                              <?php echo $message ?>
-                            </div>
+                                 <h4> Edit student <?php echo $firstname ?></h4>
+                                    <?php echo $msg ?>
+                               </div>
                                <br><br>
-                                    <form action="view-contactus.php?id=<?php echo $id?>" method="POST">
+                                    <form action="contactus.php?id=<?php echo $id?>" method="POST">
                                         <div class="row">
                                                 <div class="mb-3 col-lg-6">
                                                         <label for="firstname" class="form-label">Firstname:</label>
@@ -54,26 +55,26 @@ $sqlfetchenrolledstudent = mysqli_query($conn, "SELECT * FROM contactus WHERE no
                                                         <input type="tel" name="lastname" class="form-control" placeholder="lastname"value="<?php echo $lastname ?>" >
                                                     </div>
                                         </div>
-                                                <div class="row">
-                                                    <div class="mb-3 col-lg-6">
-                                                        <label for="email" class="form-label">email</label>
-                                                        <input type="text" name="email" class="form-control" placeholder="Enter your email"value="<?php echo $email?>" >
-                                                    </div>
-                                                    <div class="mb-3 col-lg-6">
-                                                        <label for="message" class="form-label">message</label>
-                                                        <input type="text" name="message" class="form-control" placeholder="Enter your message"value="<?php echo $message?>" >
-                                                    </div>
-                                                   
+                                        <div class="row">
+                                            <div class="mb-3 col-lg-6">
+                                                <label for="email" class="form-label">email</label>
+                                                <input type="text" name="email" class="form-control" placeholder="Enter your email"value="<?php echo $email?>" >
+                                            </div>
+                                            <div class="mb-3 col-lg-6">
+                                                <label for="message" class="form-label">message</label>
+                                                <input type="text" name="message" class="form-control" placeholder="Enter your message"value="<?php echo $message?>" >
+                                            </div>
+                                            
+                                        </div>
+                                        <br><br>
+                                            
+                            
+                                        <div class="row" style="text-align:center:">
+                                                <div class="mb-3 col-lg-6">
+                                                    <br>      
+                                                    <button type="submit" name="updatecontactus" class="btn btn-primary">update records</button>
                                                 </div>
-                                                    <br><br>
-                                                   
-                                    
-                                                <div class="row" style="text-align:center:">
-                                                        <div class="mb-3 col-lg-6">
-                                                            <br>      
-                                                            <button type="submit" name="updatecontactus" class="btn btn-primary">update records</button>
-                                                        </div>
-                                                </div>
+                                        </div>
                                     </form>                                                                    
                             </div>
                         </div>
