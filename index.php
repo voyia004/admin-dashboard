@@ -81,6 +81,7 @@ $countALLfemale = mysqli_num_rows($queryEnrolledfemale);
 						<div class="card-footer"></div>
 					
 				</div>
+				
 		  </div>
         </div>
 </div>

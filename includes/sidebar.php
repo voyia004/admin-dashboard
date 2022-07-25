@@ -25,12 +25,18 @@
 				   <span>courses</span>
 				</a>
 		       </li>
-		     <li>
-			 <a href="">
-			   <span> <i class="fa fa-graduation-cap"></i></span>
-			   <span>campus</span>
-			  </a>
-	      </li>
+		       <li>
+					<a href="">
+					<span> <i class="fa fa-graduation-cap"></i></span>
+					<span>campus</span>
+					</a>
+	           </li>
+			   <li>
+					<a href="subscribers.php">
+					<span> <i class="fa fa-handshake-o"></i></span>
+					<span>subscribe</span>
+					</a>
+	           </li>
 		   </ul>
 	   </nav>
 	</div>
